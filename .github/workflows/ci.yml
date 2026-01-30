@@ -35,5 +35,5 @@ jobs:
       - name: Mostrar resultado
         if: success()
         run: |
-          echo "✅ Todas las pruebas pasaron correctamente"
-          echo "✅ CI completado exitosamente"
+          echo "Todas las pruebas pasaron correctamente"
+          echo "CI completado exitosamente"
