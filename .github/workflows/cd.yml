@@ -25,7 +25,7 @@ jobs:
 
       - name: Preparar aplicación
         run: |
-          echo "📦 Preparando la aplicación para despliegue..."
+          echo "Preparando la aplicación para despliegue..."
           echo "Proyecto: grupo04-cicd"
           echo "Versión: 1.0.0"
           echo "Rama: ${{ github.ref_name }}"
@@ -33,27 +33,27 @@ jobs:
 
       - name: Verificar aplicación
         run: |
-          echo "🔍 Verificando la aplicación..."
+          echo "Verificando la aplicación..."
           node -c index.js
-          echo "✅ Aplicación verificada correctamente"
+          echo "Aplicación verificada correctamente"
 
       - name: Simular despliegue
         run: |
-          echo "🚀 Iniciando proceso de despliegue..."
+          echo "Iniciando proceso de despliegue..."
           echo "Entorno: Producción"
           echo "Servidor: servidor-produccion.ejemplo.com"
           sleep 2
-          echo "📤 Subiendo archivos al servidor..."
+          echo "Subiendo archivos al servidor..."
           sleep 2
-          echo "🔄 Reiniciando servicios..."
+          echo "Reiniciando servicios..."
           sleep 1
-          echo "✅ Despliegue completado exitosamente"
+          echo "Despliegue completado exitosamente"
 
       - name: Notificación de éxito
         if: success()
         run: |
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "✅ DESPLIEGUE EXITOSO"
+          echo "   DESPLIEGUE EXITOSO"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "Proyecto: grupo04-cicd"
           echo "Versión: 1.0.0"
@@ -65,5 +65,5 @@ jobs:
       - name: Notificación de fallo
         if: failure()
         run: |
-          echo "❌ El despliegue ha fallado"
+          echo "El despliegue ha fallado"
           echo "Por favor, revisa los logs anteriores"
